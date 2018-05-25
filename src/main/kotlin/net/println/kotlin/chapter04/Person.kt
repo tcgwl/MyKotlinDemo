@@ -1,5 +1,5 @@
 package net.println.kotlin.chapter04
-
+//抽象类与继承
 abstract class Person(open val age: Int) {
     abstract fun work()
 }

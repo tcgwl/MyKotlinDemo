@@ -1,4 +1,4 @@
-package net.println.kotlin.chapter04
+package net.println.kotlin.chapter04.manager
 
 /**
  * 接口代理(诸葛亮反例，事必躬亲)
