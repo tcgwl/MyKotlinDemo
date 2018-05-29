@@ -17,7 +17,7 @@ class Complex(var real:Double, var imaginary:Double) {
     }
 
     operator fun invoke(): Double {
-        return Math.hypot(real, imaginary)
+        return Math.hypot(real, imaginary) //计算直角三角形的斜边长
     }
 
     override fun toString(): String {
@@ -26,7 +26,7 @@ class Complex(var real:Double, var imaginary:Double) {
 }
 
 class Book {
-    infix fun on(any: Any): Boolean {
+    infix fun on(any: Any): Boolean { //中缀符号infix
         return true
     }
 }

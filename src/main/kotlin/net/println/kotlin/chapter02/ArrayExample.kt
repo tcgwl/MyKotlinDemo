@@ -9,8 +9,8 @@ fun main(args: Array<String>) {
     for (int in arrayOfInt) {
         print("$int, ")
     }
-    println("\n"+arrayOfString[2])
-    println(arrayOfChar.joinToString(""))
-    println(arrayOfChar.joinToString(","))
-    println(arrayOfInt.slice(1..2))
+    println("\n"+arrayOfString[2]) //程序猿
+    println(arrayOfChar.joinToString("")) //HelloWorld
+    println(arrayOfChar.joinToString(",")) //H,e,l,l,o,W,o,r,l,d
+    println(arrayOfInt.slice(1..2)) //[3, 5]
 }

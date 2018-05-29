@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
 
     val helloWorld = Hello::world
 
-    args.filter(String::isNotEmpty)//过滤空字符串，类似于这种扩展方法，有默认的第一个参数，即调用实例
+    args.filter(String::isNotEmpty).forEach(::println)//过滤空字符串，类似于这种扩展方法，有默认的第一个参数，即调用实例
 
     val pdfPrinter = PdfPrinter()
     args.forEach(pdfPrinter::println)

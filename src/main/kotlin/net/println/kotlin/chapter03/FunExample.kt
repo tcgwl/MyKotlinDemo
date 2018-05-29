@@ -13,9 +13,6 @@ fun main(args: Array<String>) {
     var a = 4
     var b = 5
     println("$a + $b = ${sum(a, b)}")
-    a = 3
-    b = 6
-    println("$a + $b = ${sum(a, b)}")
 
     sayHi("Harry")
     sayHi2("Lucy")
@@ -28,10 +25,8 @@ fun main(args: Array<String>) {
     }
 
     println("-------------------")
-
 //    args.forEach { println(it) }
     args.forEach(::println)
-
     println("-------------------")
 
 //    args.forEach {
@@ -47,9 +42,9 @@ fun main(args: Array<String>) {
     println("The End")
 
     println(::sum)
-    println(sum2)
-    println(printlnHello is () -> Unit)
-    println(sayHi2)
+    println(sum2) //Function2<java.lang.Integer, java.lang.Integer, java.lang.Integer>
+    println(printlnHello is () -> Unit) //true
+    println(sayHi2) //Function1<java.lang.String, kotlin.Unit>
 }
 
 fun sum(a:Int, b: Int): Int {

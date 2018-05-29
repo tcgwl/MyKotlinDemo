@@ -31,11 +31,11 @@ fun main(args: Array<String>) {
 
     val parent: Parent = Child()
     if (parent is Child) {
-        println(parent.name)
+        println(parent.name) //父类引用可以直接使用子类成员
     }
 
-    val parent1: Parent = Parent()
+    val parent1 = Parent()
     //as? 避免出现 ClassCastException, 安全的类型转换
     val child: Child? = parent1 as? Child
-    println(child)
+    println(child) //null
 }
