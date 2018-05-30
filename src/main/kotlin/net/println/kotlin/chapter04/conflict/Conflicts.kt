@@ -28,19 +28,15 @@ interface C {
     fun x(): String = "及格"
 }
 
-class D(var y: Int = 60): A(), B, C {
+class D(private var y: Int = 60): A(), B, C {
     override fun x(): String {
         println("call x() in D")
-        if (y > 90) {
-            return "优";
-        } else if (y > 80) {
-            return super<A>.x()
-        } else if (y > 70) {
-            return super<B>.x()
-        } else if (y >= 60) {
-            return super<C>.x()
-        } else {
-            return "不及格"
+        return when {
+            y > 90 -> "优"
+            y > 80 -> super<A>.x()
+            y > 70 -> super<B>.x()
+            y >= 60 -> super<C>.x()
+            else -> "不及格"
         }
     }
 

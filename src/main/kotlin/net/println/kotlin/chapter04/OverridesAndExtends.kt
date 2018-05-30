@@ -10,7 +10,7 @@ package net.println.kotlin.chapter04
  * 默认参数
  * 1. 为函数参数设定一个默认值
  * 2. 可以为任意位置的参数设置默认值
- * 3. 函数调用产生混淆时用具名参赛
+ * 3. 函数调用产生混淆时用具名参数
  *
  * 方法重载与默认参数
  * 1. 两者的相关性以及@JvmOverloads(在java代码中调用含默认参数的方法时有用)
@@ -30,12 +30,13 @@ package net.println.kotlin.chapter04
 
 fun main(args: Array<String>) {
 //    println("abc".times(5))
-    println("abc" * 5)
+    //等价于
+    println("abc" * 5) //abcabcabcabcabc
 
-    println("abc".a)
-    println("abc".b)
+    println("abc".a) //12345
+    println("abc".b) //5
     "abc".b = 8
-    println("abc".b)
+    println("abc".b) //5，扩展属性不能初始化
 }
 //扩展方法
 //fun String.times(int: Int): String {

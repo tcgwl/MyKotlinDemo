@@ -24,9 +24,9 @@ class Doctor(age: Int): Person(age) {
 fun main(args: Array<String>) {
     val person: Person = MaNong(23)
     person.work()
-    println(person.age)
+    println(person.age) //0
 
     val person2: Person = Doctor(27)
     person2.work()
-    println(person2.age)
+    println(person2.age) //27
 }

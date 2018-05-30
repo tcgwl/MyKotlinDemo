@@ -77,5 +77,5 @@ fun main(args: Array<String>) {
     val computer = Computer()
 //    val mouse = USBMouse("罗技鼠标")
     val mouse = LogitechMouse()
-    computer.addInputDevice(mouse)
+    computer.addInputDevice(mouse) //add usb input device: 罗技鼠标
 }

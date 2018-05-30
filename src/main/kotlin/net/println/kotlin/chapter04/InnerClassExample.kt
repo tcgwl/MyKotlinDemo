@@ -4,7 +4,7 @@ package net.println.kotlin.chapter04
  * 内部类
  * 1. 定义在类内部的类
  * 2. 与类成员有相似的访问控制
- * 3. 默认是静态内部类，非静态用inner关键字
+ * 3. 默认是静态内部类，非静态用 inner 关键字
  * 4. this@Outter, this@Inner 的用法
  *
  * 匿名内部类
@@ -16,7 +16,7 @@ open class Outter {
     val a:Int = 0
 
 //    class Inner{ //默认静态内部类
-    inner class Inner { //非静态内部类
+    inner class Inner { //非静态内部类，用 inner 关键字
         val a:Int = 1
 
         fun hello() {
@@ -36,7 +36,8 @@ class View {
 
 fun main(args: Array<String>) {
     val outter = Outter()
-    val inner = outter.Inner()
+//    val inner = Outter.Inner() //默认静态内部类
+    val inner = outter.Inner() //非静态内部类
     inner.hello()
 
     val view = View()

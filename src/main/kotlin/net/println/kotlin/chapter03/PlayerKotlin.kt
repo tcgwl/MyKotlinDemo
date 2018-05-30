@@ -14,7 +14,7 @@ class PlayerKotlin {
     private val state = State.IDLE
 
     fun pause() {
-        when (state) {
+        when (state) {//when替代switch
             PlayerKotlin.State.BUFFERING, PlayerKotlin.State.PLAYING -> doPause()
             else -> doOther()//什么都不做
         }

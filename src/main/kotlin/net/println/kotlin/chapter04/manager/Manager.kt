@@ -40,7 +40,7 @@ class Manager: Driver, Writer {
 //资深经理
 //by: 接口代理
 class SeniorManager(val driver: Driver, val writer: Writer): Driver by driver, Writer by writer
-
+//等价于
 //class SeniorManager(val driver: Driver, val writer: Writer): Driver, Writer {
 //    override fun drive() {
 //        driver.drive()

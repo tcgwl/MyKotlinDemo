@@ -28,6 +28,8 @@ fun main(args: Array<String>) {
     val coutyard = Countyard()
     val forbiddenCity = ForbiddenCity()
 
+//    println(coutyard.house) //错误
     println(coutyard.flower)
     println(forbiddenCity.houses)
+//    println(forbiddenCity.flowers) //错误
 }

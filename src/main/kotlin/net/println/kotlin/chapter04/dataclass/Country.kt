@@ -3,7 +3,7 @@ package net.println.kotlin.chapter04.dataclass
 import net.println.kotlin.chapter04.annotations.Poko
 
 /**
- * 数据类
+ * 数据类 data class
  * 1. 再见，JavaBean
  * 2. 默认实现copy、toString等方法
  * 3. componentN方法
@@ -31,15 +31,15 @@ class ComponentX {
 
 fun main(args: Array<String>) {
     val china = Country(0, "中国")
-    println(china)
-    println(china.component1())
-    println(china.component2())
+    println(china) //Country(id=0, name=中国)
+    println(china.component1()) //0
+    println(china.component2()) //中国
 
     val (id, name) = china
-    println(id)
-    println(name)
+    println(id) //0
+    println(name) //中国
 
     val componentX = ComponentX()
     val (a,b,c,d) = componentX
-    println("$a $b$c$d")
+    println("$a $b$c$d") //你好，我是 110
 }
